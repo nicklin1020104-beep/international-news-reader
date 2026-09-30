@@ -20,6 +20,8 @@ jobs:
           node-version: 20
 
       - name: Build today's edition
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node build.js
 
       - name: Commit and push if changed

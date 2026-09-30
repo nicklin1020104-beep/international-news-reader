@@ -7,6 +7,7 @@ const { lookup, formOfLemma } = require("./lib/dict");
 const { findGrammarNotes } = require("./lib/grammar");
 const { candidateWords, findExampleSentence } = require("./lib/vocab");
 const { slugify, splitSentences, wordCount, readTimeLabel, guessCategory } = require("./lib/util");
+const { writeArticle } = require("./lib/ai");
 
 const TEMPLATE_PATH = path.join(__dirname, "template.html");
 const OUT_PATH = path.join(__dirname, "index.html");
@@ -114,13 +115,13 @@ async function buildVocabAndGrammar(sentences) {
   return { vocab, grammar };
 }
 
-async function buildArticle(item, usedIds, now) {
-  const titleEn = item.title.trim();
-  const descRaw = item.description.trim();
-  // Drop boilerplate/teaser cruft some feeds append (e.g. "Continue reading...")
-  const desc = descRaw.replace(/\s*(Continue reading.*|Read more.*|\[…\]|\.\.\.$)/i, "").trim();
-  if (!desc || desc.length < 25) return null;
+async function buildArticleWithAi(titleEn, desc, item) {
+  const ai = await writeArticle({ titleEn, desc, source: item.source, link: item.link });
+  if (!ai || !ai.en || !ai.en.length || !ai.zh || ai.en.length !== ai.zh.length) return null;
+  return { titleZh: ai.titleZh, enParas: ai.en, zhParas: ai.zh, vocab: ai.vocab || [], grammar: ai.grammar || [] };
+}
 
+async function buildArticleFallback(titleEn, desc) {
   const sentences = splitSentences(desc).slice(0, 4);
   if (!sentences.length) return null;
 
@@ -142,6 +143,27 @@ async function buildArticle(item, usedIds, now) {
   if (!enParas.length) return null;
 
   const { vocab, grammar } = await buildVocabAndGrammar([titleEn, ...sentences]);
+  return { titleZh, enParas, zhParas, vocab, grammar };
+}
+
+async function buildArticle(item, usedIds, now) {
+  const titleEn = item.title.trim();
+  const descRaw = item.description.trim();
+  // Drop boilerplate/teaser cruft some feeds append (e.g. "Continue reading...")
+  const desc = descRaw.replace(/\s*(Continue reading.*|Read more.*|\[…\]|\.\.\.$)/i, "").trim();
+  if (!desc || desc.length < 25) return null;
+
+  let built = null;
+  if (process.env.ANTHROPIC_API_KEY) {
+    try {
+      built = await buildArticleWithAi(titleEn, desc, item);
+    } catch (e) {
+      console.error("  [ai] failed for", titleEn, "-", e.message);
+    }
+  }
+  if (!built) built = await buildArticleFallback(titleEn, desc);
+  if (!built) return null;
+  const { titleZh, enParas, zhParas, vocab, grammar } = built;
 
   let id = slugify(titleEn);
   let n = 2;
