@@ -1,0 +1,589 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>國際新聞晨讀</title>
+<meta name="description" content="每天六則國際新聞，中英對照、原文逐字朗讀、中文翻譯與重點單字文法。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#EBECEF; --app:#FFFFFF; --surface-2:#F0F1F3;
+  --ink:#15171C; --ink-soft:#3E434D; --muted:#888E9A; --line:#E4E6EA;
+  --rule:#15171C; --accent:#C2321B; --accent-soft:#FBEDE9;
+  --marker:#FFE24D; --marker-trail:rgba(240,192,0,.32); --marker-deep:#EAB600; --marker-ink:#241B00;
+  --display:"Bricolage Grotesque","Segoe UI","Noto Sans TC",system-ui,sans-serif;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --serif-zh:"Noto Serif TC",Georgia,serif;
+  --sans:"Noto Sans TC",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0D0F12; --app:#16181D; --surface-2:#1E2127;
+    --ink:#ECEDF0; --ink-soft:#AAB0BC; --muted:#767D8A; --line:#282C34;
+    --rule:#ECEDF0; --accent:#F26A50; --accent-soft:#2A1C18;
+    --marker:#E7C63D; --marker-trail:rgba(231,198,61,.20); --marker-deep:#B89A1E; --marker-ink:#1C1500;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0D0F12; --app:#16181D; --surface-2:#1E2127;
+  --ink:#ECEDF0; --ink-soft:#AAB0BC; --muted:#767D8A; --line:#282C34;
+  --rule:#ECEDF0; --accent:#F26A50; --accent-soft:#2A1C18;
+  --marker:#E7C63D; --marker-trail:rgba(231,198,61,.20); --marker-deep:#B89A1E; --marker-ink:#1C1500;
+}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.6;-webkit-font-smoothing:antialiased}
+.app{max-width:720px;margin:0 auto;background:var(--app);min-height:100vh;position:relative;overflow-x:hidden}
+@media (min-width:780px){
+  .app{border-left:1px solid var(--line);border-right:1px solid var(--line);box-shadow:0 0 80px rgba(15,20,40,.07)}
+}
+h1,h2,h3,p,ul,ol{margin:0}
+button{font-family:inherit;color:inherit;cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+
+/* ---------------- HOME ---------------- */
+.masthead{padding:24px 24px 0}
+.masthead__rule{border-top:3px solid var(--rule)}
+.mark{display:flex;justify-content:space-between;align-items:baseline;padding-top:11px;
+  font:700 .74rem/1 var(--display);letter-spacing:.14em;text-transform:uppercase}
+.mark .ed{color:var(--muted);letter-spacing:.06em;font-variant-numeric:tabular-nums}
+.masthead h1{font:800 clamp(2.05rem,8.5vw,2.95rem)/1.02 var(--display);letter-spacing:-.025em;
+  margin:.3em 0 .22em;text-wrap:balance}
+.masthead .stand{font:400 1.02rem/1.55 var(--serif);color:var(--ink-soft);max-width:32ch;
+  padding-bottom:22px;border-bottom:1px solid var(--line)}
+
+.list{display:flex;flex-direction:column}
+.story{position:relative;display:grid;grid-template-columns:40px 1fr;column-gap:16px;row-gap:0;
+  width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);
+  padding:22px 24px;transition:background .16s}
+.story:hover{background:var(--surface-2)}
+.story__no{font:600 .92rem/1.5 var(--display);color:var(--accent);font-variant-numeric:tabular-nums}
+.story__body{grid-column:2;display:block}
+.story__kicker{display:block;font:700 .66rem/1 var(--display);letter-spacing:.11em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:9px}
+.story__en{display:block;font:700 1.3rem/1.24 var(--display);letter-spacing:-.012em;text-wrap:balance;transition:color .16s}
+.story:hover .story__en{color:var(--accent)}
+.story__zh{display:block;font:400 .95rem/1.55 var(--serif-zh);color:var(--ink-soft);margin-top:9px}
+.story__dek{display:block;font:400 .95rem/1.6 var(--serif);color:var(--ink-soft);margin-top:10px}
+.story__meta{grid-column:2;display:block;margin-top:13px;font:600 .68rem/1 var(--display);letter-spacing:.05em;
+  text-transform:uppercase;color:var(--muted)}
+.story--lead{padding-top:26px;padding-bottom:26px}
+.story--lead .story__en{font-size:1.68rem;line-height:1.16}
+
+.home-foot{padding:26px 24px 48px;color:var(--muted);font:400 .8rem/1.75 var(--sans)}
+.home-foot b{color:var(--ink-soft);font-weight:600}
+
+/* ---------------- ARTICLE ---------------- */
+.appbar{position:sticky;top:0;z-index:30;height:52px;display:flex;align-items:center;
+  padding:0 16px 0 10px;background:var(--app);border-bottom:1px solid var(--line)}
+.back{border:0;background:none;font:700 .8rem/1 var(--display);letter-spacing:.02em;color:var(--ink-soft);
+  padding:9px 10px;border-radius:8px;display:inline-flex;align-items:center;gap:.35em}
+.back:hover{background:var(--surface-2);color:var(--ink)}
+.appbar__src{margin-left:auto;font:600 .7rem/1 var(--display);letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted)}
+
+.hero{padding:26px 24px 20px}
+.hero__kicker{font:700 .7rem/1 var(--display);letter-spacing:.11em;text-transform:uppercase;color:var(--accent)}
+.hero h1{font:800 clamp(1.72rem,5.6vw,2.35rem)/1.16 var(--display);letter-spacing:-.018em;
+  text-wrap:balance;margin:.52em 0 0}
+.hero .zh{font:600 1.05rem/1.5 var(--serif-zh);color:var(--ink-soft);margin-top:.55em}
+.hero .byline{margin-top:1.1em;padding-top:.85em;border-top:2px solid var(--rule);
+  font:600 .71rem/1.5 var(--display);letter-spacing:.03em;text-transform:uppercase;color:var(--muted)}
+
+.tabs{position:sticky;top:52px;z-index:29;display:flex;height:46px;background:var(--app);
+  border-bottom:1px solid var(--line)}
+.tab{position:relative;z-index:1;flex:1;border:0;background:none;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:1px;color:var(--muted)}
+.tab b{font:700 .84rem/1.1 var(--display)}
+.tab span{font:600 .55rem/1 var(--display);letter-spacing:.11em;text-transform:uppercase}
+.tab[aria-selected="true"]{color:var(--ink)}
+.tab-ind{position:absolute;bottom:0;left:0;height:2.5px;width:33.333%;background:var(--accent);
+  transition:transform .28s cubic-bezier(.4,0,.2,1)}
+
+.panel{padding:18px 24px 96px}
+.panel[hidden]{display:none}
+.panel:not([hidden]){animation:pop .26s ease}
+@keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* player */
+.player{position:sticky;top:98px;z-index:20;display:flex;align-items:center;gap:10px;
+  margin:0 -24px 14px;padding:12px 24px;background:var(--app);border-bottom:1px solid var(--line)}
+.player.disabled{opacity:.55;pointer-events:none}
+.pbtn{flex:none;border:0;border-radius:50%;background:var(--ink);color:var(--app);display:grid;place-items:center}
+.pbtn--main{width:44px;height:44px;font-size:.9rem}
+.pbtn--main.is-playing{background:var(--accent);color:#fff}
+.pbtn--sm{width:34px;height:34px;font-size:.72rem;background:var(--surface-2);color:var(--ink-soft)}
+.player__mid{flex:1;min-width:0}
+.ptrack{height:5px;border-radius:3px;background:var(--surface-2);overflow:hidden}
+.ptrack i{display:block;height:100%;width:0;background:var(--marker-deep);transition:width .18s linear}
+.player__row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:7px}
+.player__hint{font:400 .71rem/1.3 var(--serif);color:var(--muted);overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+.player__hint.warn{color:var(--accent)}
+.pspeed{display:flex;gap:4px;flex:none}
+.pspeed button{border:1px solid var(--line);background:var(--app);border-radius:6px;
+  padding:.3em .46em;font:600 .64rem/1 var(--display);color:var(--ink-soft)}
+.pspeed button[aria-pressed="true"]{background:var(--ink);color:var(--app);border-color:var(--ink)}
+
+/* english body */
+.para{font:400 1.14rem/1.78 var(--serif);color:var(--ink);margin:1.1em 0}
+.para:first-of-type{margin-top:.2em}
+.para:first-of-type::first-letter{font:800 3.1em/.82 var(--display);float:left;
+  margin:.06em .1em 0 0;color:var(--accent)}
+.w{cursor:pointer;border-radius:3px;padding:0 .04em;
+  background-image:linear-gradient(var(--marker),var(--marker));
+  background-repeat:no-repeat;background-position:0 88%;background-size:0% 30%;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+  transition:background-size .2s cubic-bezier(.33,0,.2,1),color .18s}
+.w:hover{background-size:100% 30%}
+.w--done{background-image:linear-gradient(var(--marker-trail),var(--marker-trail));background-size:100% 30%}
+.w--active{background-image:linear-gradient(var(--marker),var(--marker));background-size:100% 86%;
+  color:var(--marker-ink);border-radius:4px}
+.srclink{display:inline-flex;align-items:center;gap:.4em;margin-top:1.6em;font:600 .82rem/1 var(--display);
+  color:var(--accent);text-decoration:none;border:1px solid var(--accent);border-radius:999px;padding:.7em 1.1em}
+.srclink:hover{background:var(--accent-soft)}
+
+/* chinese */
+.zh-lead{font:700 .68rem/1 var(--display);letter-spacing:.11em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:16px}
+.zh-para{font:400 1.06rem/2 var(--serif-zh);color:var(--ink);margin:1.05em 0}
+.zh-para:first-of-type{margin-top:0}
+
+/* vocab */
+.vsec{font:700 .72rem/1 var(--display);letter-spacing:.12em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 16px}
+.vgrid{display:flex;flex-direction:column;gap:12px;margin-bottom:36px}
+.vitem{border:1px solid var(--line);border-radius:13px;padding:16px 17px}
+.vitem__head{display:flex;align-items:baseline;flex-wrap:wrap;gap:9px;margin-bottom:10px}
+.vterm{font:700 1.12rem/1.2 var(--display);letter-spacing:-.01em;color:var(--ink)}
+.vpos{font:600 .6rem/1 var(--display);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  border:1px solid var(--line);border-radius:5px;padding:.3em .46em}
+.ven{font:400 .95rem/1.5 var(--serif);color:var(--ink-soft)}
+.vzh{font:400 .99rem/1.6 var(--serif-zh);color:var(--ink);margin-top:3px}
+.vex{font:italic 400 .95rem/1.6 var(--serif);color:var(--ink-soft);margin-top:12px;
+  padding:10px 12px;background:var(--surface-2);border-radius:9px}
+.vex b{font-style:normal;color:var(--marker-ink);background:var(--marker);border-radius:3px;padding:0 .14em}
+.gitem{border-left:2.5px solid var(--accent);padding:1px 0 1px 16px;margin-bottom:22px}
+.gpoint{font:700 .96rem/1.35 var(--display);color:var(--ink)}
+.gzh{font:400 .97rem/1.85 var(--serif-zh);color:var(--ink-soft);margin-top:6px}
+.gex{font:italic 400 .92rem/1.55 var(--serif);color:var(--ink-soft);margin-top:9px}
+
+@media (prefers-reduced-motion: reduce){
+  .w,.ptrack i,.story,.story__en,.tab-ind{transition:none}
+  .panel:not([hidden]){animation:none}
+  *{scroll-behavior:auto}
+}
+</style>
+
+<div class="app" id="app"></div>
+
+<script>
+/* ============ DATA ============ */
+const STORIES = {
+  "hegseth-to-cut-number-of": {"id":"hegseth-to-cut-number-of","cat":"國際 · World","source":"Al Jazeera","read":"約 1 分鐘","titleEn":"Hegseth to cut number of US general and admiral positions by 20%","titleZh":"赫格斯將美國將軍和海軍上將職位數量削減20%","en":["Pentagon official says the plan will be announced in the defence secretary's 'State of the Force' address in Virginia."],"zh":["五角大廈官員表示，該計畫將在國防部長在維吉尼亞州舉行的「軍情」演講中宣布。"],"vocab":[{"t":"position","p":"noun","en":"A place or location","zh":"一個地方或地點","ex":"“Hegseth to cut number of US general and admiral <b>positions</b> by 20%”"},{"t":"general","p":"adjective","en":"Including or involving every part or member of a given or implied entity, whole, etc.; common to all, universal","zh":"包括或涉及給定或暗示的實體、整體等的每個部分或成員；所有人共有的，普遍的","ex":"“Hegseth to cut number of US <b>general</b> and admiral positions by 20%”"},{"t":"admiral","p":"noun","en":"The commander of a naval squadron or fleet, regardless of formal rank","zh":"海軍中隊或艦隊的指揮官，無論正式軍階為何","ex":"“Hegseth to cut number of US general and <b>admiral</b> positions by 20%”"},{"t":"defence","p":"noun","en":"The action of defending, of protecting from attack, danger or injury","zh":"防禦、保護免受攻擊、危險或傷害的行為","ex":"“Pentagon official says the plan will be announced in the <b>defence</b> secretary's 'State of the Force' address in Virginia.”"},{"t":"address","p":"noun","en":"Direction. Guidance; help. A polite approach made to another person, especially of a romantic nature; an amorous advance. A manner of speaking or writing to another; language, style","zh":"方向。指導;幫助。對另一個人，尤其是浪漫的人，採取禮貌的態度；一種多情的進展。與他人交談或寫作的一種方式；語言、風格","ex":"“Pentagon official says the plan will be announced in the defence secretary's 'State of the Force' <b>address</b> in Virginia.”"}],"grammar":[{"g":"未來／預期：will / be expected to / plan to","zh":"用來描述尚未發生、但預期或計畫會發生的事，will 較肯定，be expected to／plan to 則帶有「官方說法／計畫」的語氣。","ex":"“Pentagon official says the plan will be announced in the defence secretary's 'State of the Force' address in Virginia.”"}],"link":"https://www.aljazeera.com/news/2026/9/30/hegseth-to-cut-number-of-us-general-and-admiral-positions-by-20?traffic_source=rss"},
+  "south-korea-demands-apology-from": {"id":"south-korea-demands-apology-from","cat":"亞洲 · Asia","source":"BBC News","read":"約 1 分鐘","titleEn":"South Korea demands apology from Pyongyang for landmine blasts that injured three","titleZh":"南韓要求平壤就地雷爆炸造成三人受傷道歉","en":["Blasts in the Demilitarised Zone (DMZ) injured three South Korean personnel earlier this month."],"zh":["本月早些時候，非軍事區（DMZ）發生爆炸，造成三名韓國人員受傷。"],"vocab":[{"t":"personnel","p":"noun","en":"Collection of people in an organization, such as employees and office staff, members of the military, etc","zh":"組織中人員的集合，例如員工和辦公室工作人員、軍人等","ex":"“Blasts in the Demilitarised Zone (DMZ) injured three South Korean <b>personnel</b> earlier this month.”"},{"t":"land","p":"noun","en":"The part of Earth which is not covered by oceans or other bodies of water","zh":"地球上未被海洋或其他水體覆蓋的部分","ex":"“South Korea demands apology from Pyongyang for <b>landmine</b> blasts that injured three”"},{"t":"demand","p":"noun","en":"The desire to purchase goods and services","zh":"購買商品和服務的願望","ex":"“South Korea <b>demands</b> apology from Pyongyang for landmine blasts that injured three”"},{"t":"apology","p":"noun","en":"An expression of remorse or regret for having said or done something that harmed another: an instance of apologizing (saying that one is sorry)","zh":"對傷害他人的言論或行為表示悔恨或遺憾的表達：道歉的例子（表示抱歉）","ex":"“South Korea demands <b>apology</b> from Pyongyang for landmine blasts that injured three”"},{"t":"injure","p":"verb","en":"To wound or cause physical harm to a living creature","zh":"對生物造成傷害或造成身體傷害","ex":"“South Korea demands apology from Pyongyang for landmine blasts that <b>injured</b> three”"},{"t":"early","p":"adjective","en":"At a time in advance of the usual or expected event","zh":"在通常或預期事件之前的某個時間","ex":"“Blasts in the Demilitarised Zone (DMZ) injured three South Korean personnel <b>earlier</b> this month.”"}],"grammar":[],"link":"https://www.bbc.co.uk/news/articles/cwj3dkvpm4e7o?at_medium=RSS&at_campaign=rss"},
+  "potential-taiwan-tension-sparked-last": {"id":"potential-taiwan-tension-sparked-last","cat":"亞洲 · Asia","source":"NPR","read":"約 1 分鐘","titleEn":"Potential Taiwan tension sparked 'last minute' change in Trump-Xi National Archives visit","titleZh":"潛在的台灣緊張局勢引發川普與習近平國家檔案館訪問的「最後一刻」變化","en":["The sudden change was precipitated because of Chinese displeasure over one document that the U.S. had planned to show."],"zh":["這一突然的變化是由於中國對美國計劃展示的一份文件的不滿而促成的。"],"vocab":[{"t":"precipitated","p":"adjective","en":"Hastened; hurried","zh":"趕緊的；慌忙","ex":"“The sudden change was <b>precipitated</b> because of Chinese displeasure over one document that the U.S. had planned to show.”"},{"t":"displeasure","p":"noun","en":"A feeling of being displeased with something or someone; dissatisfaction; disapproval","zh":"對某事或某人感到不滿的感覺；不滿意；不贊成","ex":"“The sudden change was precipitated because of Chinese <b>displeasure</b> over one document that the U.S. had planned to show.”"},{"t":"document","p":"noun","en":"An original or official paper used as the basis, proof, or support of anything else, including any writing, book, or other instrument conveying information pertinent to such proof or support","zh":"用作其他任何事物的基礎、證明或支持的原始或官方文件，包括傳達與此類證明或支持相關的訊息的任何文字、書籍或其他工具","ex":"“The sudden change was precipitated because of Chinese displeasure over one <b>document</b> that the U.S. had planned to show.”"},{"t":"tension","p":"noun","en":"The condition of being held in a state between two or more forces, which are acting in opposition to each other","zh":"處於兩種或兩種以上相互對立的力量之間的狀態","ex":"“Potential Taiwan <b>tension</b> sparked 'last minute' change in Trump-Xi National Archives visit”"}],"grammar":[{"g":"被動語態：be + 過去分詞","zh":"由 be 動詞（is/are/was/were/been）加過去分詞組成，強調「動作的承受者」而不是「誰做的」，新聞報導常用來保持客觀語氣。","ex":"“The sudden change was precipitated because of Chinese displeasure over one document that the U.S. had planned to show.”"}],"link":"https://www.npr.org/2026/09/29/nx-s1-5984989/digital-archives-trump-xi"},
+  "israel-s-lapid-accuses-netanyahu": {"id":"israel-s-lapid-accuses-netanyahu","cat":"中東 · Middle East","source":"Al Jazeera","read":"約 1 分鐘","titleEn":"Israel’s Lapid accuses Netanyahu of ‘fear-mongering’ over attack warning","titleZh":"以色列拉皮德指責內塔尼亞胡針對襲擊警告“散佈恐懼”","en":["Opposition leader dismisses Netanyahu's warning of possible attacks during next month's general election."],"zh":["反對派領袖駁回了內塔尼亞胡關於下個月大選期間可能發生攻擊的警告。"],"vocab":[{"t":"possible","p":"adjective","en":"Able but not certain to happen; neither inevitable nor impossible","zh":"能夠但不一定會發生；既不是不可避免也不是不可能","ex":"“Opposition leader dismisses Netanyahu's warning of <b>possible</b> attacks during next month's general election.”"},{"t":"general","p":"adjective","en":"Including or involving every part or member of a given or implied entity, whole, etc.; common to all, universal","zh":"包括或涉及給定或暗示的實體、整體等的每個部分或成員；所有人共有的，普遍的","ex":"“Opposition leader dismisses Netanyahu's warning of possible attacks during next month's <b>general</b> election.”"},{"t":"attack","p":"noun","en":"An attempt to cause damage, injury to, or death of an opponent or enemy. Any of several specific maneuvers, skills, or special abilities that a character can use to inflict damage against opponents","zh":"試圖對對手或敵人造成損害、傷害或死亡。角色可以用來對對手造成傷害的幾種特定動作、技能或特殊能力中的任何一種","ex":"“Israel’s Lapid accuses Netanyahu of ‘fear-mongering’ over <b>attack</b> warning”"},{"t":"next","p":"adjective","en":"Nearest in place or position, having nothing similar intervening; adjoining","zh":"最近的地點或位置，沒有類似的干擾；毗鄰的","ex":"“Opposition leader dismisses Netanyahu's warning of possible attacks during <b>next</b> month's general election.”"}],"grammar":[],"link":"https://www.aljazeera.com/news/2026/9/30/israels-lapid-accuses-netanyahu-of-fear-mongering-over-attack-warning?traffic_source=rss"},
+  "girl-has-multiple-surgeries-to": {"id":"girl-has-multiple-surgeries-to","cat":"中東 · Middle East","source":"BBC News","read":"約 1 分鐘","titleEn":"Girl has multiple surgeries to control infections after strike in Gaza","titleZh":"加薩襲擊後女孩接受多次手術以控制感染","en":["Witnesses say Raseel's tent was hit by an Israeli helicopter strike. Israel’s military says it has no record of the attack."],"zh":["目擊者稱拉塞爾的帳篷被以色列直升機攻擊擊中。以色列軍方表示沒有這次攻擊的記錄。"],"vocab":[{"t":"infection","p":"noun","en":"The act or process of infecting","zh":"感染的行為或過程","ex":"“Girl has multiple surgeries to control <b>infections</b> after strike in Gaza”"},{"t":"helicopter","p":"noun","en":"An aircraft that is borne along by one or more sets of long rotating blades which allow it to hover, move in any direction including reverse, or land; and typically having a smaller set of blades on its tail to stabilize the aircraft","zh":"由一組或多組長旋轉葉​​片承載的飛機，使其能夠懸停、沿任何方向移動（包括反向）或著陸；通常在其尾部有一組較小的葉片來穩定飛機","ex":"“Witnesses say Raseel's tent was hit by an Israeli <b>helicopter</b> strike.”"},{"t":"surgery","p":"noun","en":"The act or process of medical intervention involving incisions to remove, repair, or replace a part of a body; an instance of this process (a procedure)","zh":"涉及切除、修復或更換身體某一部位的切口的醫療幹預行為或過程；該過程的一個實例（過程）","ex":"“Girl has multiple <b>surgeries</b> to control infections after strike in Gaza”"},{"t":"multiple","p":"determiner","en":"More than one (followed by plural)","zh":"多個（後面跟複數）","ex":"“Girl has <b>multiple</b> surgeries to control infections after strike in Gaza”"},{"t":"military","p":"adjective","en":"Characteristic of members of the armed forces","zh":"武裝部隊成員的特徵","ex":"“Israel’s <b>military</b> says it has no record of the attack.”"},{"t":"control","p":"verb","en":"To exercise influence over; to suggest or dictate the behavior of","zh":"施加影響；建議或指示某人的行為","ex":"“Girl has multiple surgeries to <b>control</b> infections after strike in Gaza”"}],"grammar":[{"g":"被動語態：be + 過去分詞","zh":"由 be 動詞（is/are/was/were/been）加過去分詞組成，強調「動作的承受者」而不是「誰做的」，新聞報導常用來保持客觀語氣。","ex":"“Witnesses say Raseel's tent was hit by an Israeli helicopter strike.”"}],"link":"https://www.bbc.co.uk/news/videos/c8n5d0e0n6wdo?at_medium=RSS&at_campaign=rss"},
+  "half-a-million-trees-to": {"id":"half-a-million-trees-to","cat":"氣候 · Climate","source":"The Guardian","read":"約 1 分鐘","titleEn":"Half a million trees to be planted in England in three years, says government","titleZh":"政府稱三年內英格蘭將種植50萬棵樹","en":["Exclusive: Environment secretary Angela Eagle to make pledge as part of efforts to protect against extreme weather Half a million trees will be planted across England in the next three years to protect against extreme weather, the environment secretary, Angela Eagle, will pledge on Wednesday morning. Mayors, local authorities, charities and grassroots groups will be given new funding and responsibilities for restoring natural landscapes such as wetlands, river edges and meadows, which can provide natural flood management and reduce the damage done by droughts."],"zh":["獨家：環境大臣安吉拉·伊格爾 (Angela Eagle) 承諾，作為抵禦極端天氣努力的一部分，英國環境大臣安吉拉·伊格爾 (Angela Eagle) 將於週三上午承諾，未來三年內將在英格蘭各地種植 50 萬棵樹，以抵禦極端天氣。市長、地方當局、慈善機構和基層團體將獲得新的資金和責任來恢復濕地、河流邊緣和草地等自然景觀，可以提供自然洪水管理並減少乾旱造成的傷害。"],"vocab":[{"t":"secretary","p":"noun","en":"A person who keeps records, takes notes and handles general clerical work","zh":"保存記錄、做筆記和處理一般文書工作的人","ex":"“Exclusive: Environment <b>secretary</b> Angela Eagle to make pledge as part of efforts to protect against extreme weather Half a million trees will be planted across England in the next three years to protect against extreme weather, the environment secretary, Angela Eagle, will pledge on Wednesday morning.”"}],"grammar":[{"g":"未來／預期：will / be expected to / plan to","zh":"用來描述尚未發生、但預期或計畫會發生的事，will 較肯定，be expected to／plan to 則帶有「官方說法／計畫」的語氣。","ex":"“Exclusive: Environment secretary Angela Eagle to make pledge as part of efforts to protect against extreme weather Half a million trees will be planted across England in the next three years to protect against extreme weather, the environment secretary, Angela Eagle, will pledge on Wednesday morning.”"},{"g":"關係子句：which / who / that","zh":"關係子句用來補充說明前面提到的人事物，可以把兩個句子的資訊合併成一句，是新聞英文常見的精簡寫法。","ex":"“Mayors, local authorities, charities and grassroots groups will be given new funding and responsibilities for restoring natural landscapes such as wetlands, river edges and meadows, which can provide natural flood management and reduce the damage done by droughts.”"}],"link":"https://www.theguardian.com/environment/2026/sep/30/half-million-trees-planted-england-three-years-angela-eagle"}
+};
+const ORDER = ["hegseth-to-cut-number-of","south-korea-demands-apology-from","potential-taiwan-tension-sparked-last","israel-s-lapid-accuses-netanyahu","girl-has-multiple-surgeries-to","half-a-million-trees-to"];
+const TAB_KEYS = ["en","zh","vocab"];
+
+/* ============ APP ============ */
+const app = document.getElementById("app");
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const synth = ("speechSynthesis" in window) ? window.speechSynthesis : null;
+let voice = null, RATE = 1;
+let wordData = [], prefixCount = [], TOTAL_WORDS = 0;
+const player = { stopped:true, state:"idle", para:0, startWord:0, activeEl:null, fbTimer:null, current:null };
+let elBtnPlay = null, elProg = null, elHint = null;
+
+function pickVoice(){
+  if(!synth) return null;
+  const v = synth.getVoices();
+  if(!v.length) return null;
+  const pref = ["Google US English","Samantha","Microsoft Aria Online (Natural) - English (United States)",
+    "Microsoft Zira - English (United States)","Google UK English Female","Google UK English Male","Daniel"];
+  for(const n of pref){ const f = v.find(x=>x.name===n); if(f) return f; }
+  return v.find(x=>/^en[-_]/i.test(x.lang)) || v.find(x=>/en/i.test(x.lang)) || null;
+}
+if(synth){
+  voice = pickVoice();
+  synth.onvoiceschanged = ()=>{ voice = pickVoice(); refreshHint(); };
+}
+function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+/* ---- routing ---- */
+function parseHash(){
+  const seg = location.hash.replace(/^#\/?/,"").split("/").filter(Boolean);
+  if(seg[0]==="s" && STORIES[seg[1]]){
+    return { view:"article", id:seg[1], tab:TAB_KEYS.includes(seg[2])?seg[2]:"en" };
+  }
+  return { view:"home" };
+}
+let cur = { view:null, id:null, tab:null };
+function route(){
+  const next = parseHash();
+  const viewChanged = next.view!==cur.view || next.id!==cur.id;
+  stopPlayback();
+  if(next.view==="home") renderHome();
+  else renderArticle(next.id, next.tab, viewChanged);
+  cur = next;
+  if(viewChanged) window.scrollTo(0,0);
+}
+window.addEventListener("hashchange", route);
+window.addEventListener("pagehide", ()=>{ if(synth) synth.cancel(); });
+
+/* ---- home ---- */
+function renderHome(){
+  const items = ORDER.map((id,i)=>{
+    const s = STORIES[id];
+    const lead = i===0;
+    return `<button class="story${lead?" story--lead":""}" data-id="${id}">
+      <span class="story__no">${String(i+1).padStart(2,"0")}</span>
+      <span class="story__body">
+        <span class="story__kicker">${esc(s.cat)}</span>
+        <span class="story__en">${esc(s.titleEn)}</span>
+        <span class="story__zh">${esc(s.titleZh)}</span>
+        ${lead?`<span class="story__dek">${esc(s.zh[0])}</span>`:""}
+      </span>
+      <span class="story__meta">${esc(s.source)} · ${esc(s.read)}</span>
+    </button>`;
+  }).join("");
+
+  app.innerHTML = `
+    <header class="masthead">
+      <div class="masthead__rule"></div>
+      <div class="mark"><span>晨讀 · Morning Read</span><span class="ed">2026.09.30</span></div>
+      <h1>今日國際新聞</h1>
+      <p class="stand">6 則今日全球新聞摘要，中英對照。點入可讀英文摘要、看中文翻譯、聽逐字朗讀，並查重點單字與文法；每則都附「閱讀完整文章」連結。</p>
+    </header>
+    <div class="list">${items}</div>
+    <footer class="home-foot">
+      每則新聞內有三個分頁：<b>原文 English</b>、<b>翻譯 中文</b>、<b>單字 Vocabulary</b>。<br>
+      原文分頁可朗讀，朗讀時單字會像螢光筆一樣逐字標記；點任一單字可從該處開始念。<br>
+      朗讀使用裝置內建語音（iOS / Android / Windows / macOS 皆內建）。<br>
+      在手機瀏覽器選「加入主畫面」即可像 App 一樣開啟。<br><br>
+      新聞摘要與中文翻譯由程式自動整理，取自公開新聞 RSS，並附「閱讀完整文章」連結到原始新聞網站。<br>
+      <b>2026年9月30日</b> 自動整理，每天 17:00（台北時間）更新一次。
+    </footer>`;
+  app.querySelectorAll(".story").forEach(b=>{
+    b.addEventListener("click", ()=>{ location.hash = "#/s/" + b.dataset.id + "/en"; });
+  });
+}
+
+/* ---- article ---- */
+function renderArticle(id, tab, full){
+  const s = STORIES[id];
+  if(full || !app.querySelector(".hero")){
+    app.innerHTML = `
+      <div class="appbar">
+        <button class="back" id="back">‹ 全部新聞</button>
+        <span class="appbar__src">${esc(s.source)} · ${esc(s.date)}</span>
+      </div>
+      <header class="hero">
+        <span class="hero__kicker">${esc(s.cat)}</span>
+        <h1>${esc(s.titleEn)}</h1>
+        <p class="zh">${esc(s.titleZh)}</p>
+        <p class="byline">${esc(s.read)}${s.author?" · "+esc(s.author):""}</p>
+      </header>
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" data-tab="en"><b>原文</b><span>English</span></button>
+        <button class="tab" role="tab" data-tab="zh"><b>翻譯</b><span>中文</span></button>
+        <button class="tab" role="tab" data-tab="vocab"><b>單字</b><span>Vocab</span></button>
+        <span class="tab-ind" id="tabInd"></span>
+      </div>
+      <div class="panel" id="panel-en" role="tabpanel" hidden></div>
+      <div class="panel" id="panel-zh" role="tabpanel" hidden></div>
+      <div class="panel" id="panel-vocab" role="tabpanel" hidden></div>`;
+    app.querySelector("#back").addEventListener("click", ()=>{ location.hash = "#/"; });
+    app.querySelectorAll(".tab").forEach(t=>{
+      t.addEventListener("click", ()=>{
+        history.replaceState(null,"", "#/s/"+id+"/"+t.dataset.tab);
+        setTab(t.dataset.tab);
+      });
+    });
+    buildEnPanel(s);
+    buildZhPanel(s);
+    buildVocabPanel(s);
+  }
+  setTab(tab);
+}
+
+function setTab(tab){
+  cur.tab = tab;
+  stopPlayback();
+  app.querySelectorAll(".tab").forEach(t=> t.setAttribute("aria-selected", String(t.dataset.tab===tab)));
+  TAB_KEYS.forEach(k=>{ app.querySelector("#panel-"+k).hidden = (k!==tab); });
+  const ind = app.querySelector("#tabInd");
+  if(ind) ind.style.transform = "translateX(" + (TAB_KEYS.indexOf(tab)*100) + "%)";
+  resetMarks();
+  syncControls();
+}
+
+function buildEnPanel(s){
+  const paras = s.en.map((text,pi)=>{
+    const parts = text.split(/(\s+)/);
+    let count = 0, out = "";
+    for(const part of parts){
+      if(part==="") continue;
+      if(/^\s+$/.test(part)){ out += " "; count += part.length; continue; }
+      out += `<span class="w" data-p="${pi}" data-start="${count}">${esc(part)}</span>`;
+      count += part.length;
+    }
+    return `<p class="para" data-p="${pi}">${out}</p>`;
+  }).join("");
+
+  const p = app.querySelector("#panel-en");
+  p.innerHTML = `
+    <div class="player" id="player">
+      <button class="pbtn pbtn--main" id="pBtn" aria-label="開始朗讀">&#9654;</button>
+      <button class="pbtn pbtn--sm" id="pRestart" aria-label="從頭朗讀">&#8635;</button>
+      <div class="player__mid">
+        <div class="ptrack"><i id="pFill"></i></div>
+        <div class="player__row">
+          <span class="player__hint" id="pHint"></span>
+          <span class="pspeed">
+            <button data-r="0.75">0.75&times;</button>
+            <button data-r="1">1&times;</button>
+            <button data-r="1.25">1.25&times;</button>
+          </span>
+        </div>
+      </div>
+    </div>
+    ${paras}
+    ${s.link?`<a class="srclink" href="${esc(s.link)}" target="_blank" rel="noopener">閱讀完整文章 Read full article →</a>`:""}`;
+
+  elBtnPlay = p.querySelector("#pBtn");
+  elProg = p.querySelector("#pFill");
+  elHint = p.querySelector("#pHint");
+  refreshHint();
+
+  elBtnPlay.addEventListener("click", toggle);
+  p.querySelector("#pRestart").addEventListener("click", restart);
+  p.querySelectorAll(".pspeed button").forEach(b=>{
+    b.addEventListener("click", ()=> setRate(parseFloat(b.dataset.r)));
+  });
+  renderRatePills();
+
+  wordData = s.en.map(()=>[]);
+  p.querySelectorAll(".w").forEach(el=>{
+    const pi = +el.dataset.p;
+    const wi = wordData[pi].length;
+    wordData[pi].push({ el, start:+el.dataset.start });
+    el.addEventListener("click", ()=> startFrom(pi, wi));
+  });
+  prefixCount = []; let acc = 0;
+  for(let i=0;i<wordData.length;i++){ prefixCount[i] = acc; acc += wordData[i].length; }
+  TOTAL_WORDS = acc || 1;
+}
+
+function refreshHint(){
+  if(!elHint) return;
+  const pl = app.querySelector("#player");
+  if(!synth){
+    elHint.textContent = "此瀏覽器不支援語音朗讀";
+    elHint.classList.add("warn");
+    if(pl) pl.classList.add("disabled");
+    return;
+  }
+  elHint.classList.remove("warn");
+  if(pl) pl.classList.remove("disabled");
+  elHint.textContent = voice ? "點單字可從該處開始朗讀" : "載入語音中… 點單字可從該處開始";
+}
+
+function buildZhPanel(s){
+  app.querySelector("#panel-zh").innerHTML =
+    `<p class="zh-lead">中文翻譯 · 對照原文</p>` +
+    s.zh.map(t=>`<p class="zh-para">${esc(t)}</p>`).join("");
+}
+
+function buildVocabPanel(s){
+  const v = s.vocab.map(x=>`
+    <li class="vitem">
+      <div class="vitem__head"><span class="vterm">${esc(x.t)}</span><span class="vpos">${esc(x.p)}</span></div>
+      <p class="ven">${esc(x.en)}</p>
+      <p class="vzh">${esc(x.zh)}</p>
+      <p class="vex">${x.ex}</p>
+    </li>`).join("");
+  const g = s.grammar.map(x=>`
+    <li class="gitem">
+      <p class="gpoint">${esc(x.g)}</p>
+      <p class="gzh">${esc(x.zh)}</p>
+      <p class="gex">${x.ex}</p>
+    </li>`).join("");
+  app.querySelector("#panel-vocab").innerHTML =
+    `<h3 class="vsec">重點單字 · Key Vocabulary</h3><ul class="vgrid">${v||"<li class=\"vitem\">（本篇暫無擷取到單字）</li>"}</ul>` +
+    (s.grammar && s.grammar.length ? `<h3 class="vsec">文法重點 · Grammar Notes</h3><ol class="vgrid">${g}</ol>` : "");
+}
+
+/* ---- playback ---- */
+function currentStory(){ return STORIES[cur.id]; }
+function toggle(){ if(player.state==="playing") pause(); else play(); }
+
+function play(){
+  if(!synth) return;
+  if(player.state==="paused"){ synth.resume(); player.state="playing"; syncControls(); return; }
+  player.stopped = false;
+  player.state = "playing";
+  const total = currentStory().en.length;
+  if(player.para >= total){ resetMarks(); player.para = 0; player.startWord = 0; }
+  const sw = player.startWord; player.startWord = 0;
+  speakPara(player.para, sw);
+  syncControls();
+}
+function pause(){
+  if(player.state==="playing"){ synth.pause(); player.state="paused"; syncControls(); }
+}
+function stopPlayback(){
+  player.stopped = true;
+  player.state = "idle";
+  if(player.fbTimer){ clearTimeout(player.fbTimer); player.fbTimer = null; }
+  if(synth){ try{ synth.cancel(); }catch(e){} }
+  syncControls();
+}
+function restart(){
+  stopPlayback();
+  resetMarks();
+  player.para = 0; player.startWord = 0;
+  setTimeout(play, 90);
+}
+function startFrom(pi, wi){
+  stopPlayback();
+  resetMarks();
+  for(let p=0;p<wordData.length;p++){
+    for(let w=0;w<wordData[p].length;w++){
+      if(p<pi || (p===pi && w<wi)) wordData[p][w].el.classList.add("w--done");
+    }
+  }
+  updateProgress(prefixCount[pi]+wi, TOTAL_WORDS);
+  player.para = pi; player.startWord = wi;
+  setTimeout(play, 90);
+}
+function setRate(r){
+  RATE = r;
+  renderRatePills();
+  if(player.state==="playing"){
+    const pi = player.para;
+    let wi = 0;
+    if(player.activeEl){
+      const k = wordData[pi].findIndex(x=>x.el===player.activeEl);
+      if(k>=0) wi = k;
+    }
+    if(player.fbTimer){ clearTimeout(player.fbTimer); player.fbTimer=null; }
+    try{ synth.cancel(); }catch(e){}
+    player.stopped = false; player.state = "playing";
+    setTimeout(()=>speakPara(pi, wi), 90);
+  }
+}
+function renderRatePills(){
+  app.querySelectorAll(".pspeed button").forEach(b=>{
+    b.setAttribute("aria-pressed", String(parseFloat(b.dataset.r)===RATE));
+  });
+}
+
+function speakPara(pi, startWord){
+  const story = currentStory();
+  if(!story || pi >= story.en.length){
+    player.state="idle"; player.para = story?story.en.length:0; syncControls(); return;
+  }
+  const words = wordData[pi];
+  const full = story.en[pi];
+  const offset = (startWord>0 && words[startWord]) ? words[startWord].start : 0;
+  const text = offset ? full.slice(offset) : full;
+
+  const u = new SpeechSynthesisUtterance(text);
+  if(voice) u.voice = voice;
+  u.lang = (voice && voice.lang) || "en-US";
+  u.rate = RATE;
+  player.para = pi;
+
+  let gotB = false, fbIdx = startWord;
+  const fbStep = ()=>{
+    if(player.stopped || fbIdx >= words.length) return;
+    activate(pi, fbIdx);
+    const t = words[fbIdx].el.textContent;
+    fbIdx++;
+    player.fbTimer = setTimeout(fbStep, Math.max(115, (85 + t.length*56) / RATE));
+  };
+  u.onstart = ()=>{ if(!gotB) player.fbTimer = setTimeout(fbStep, 10); };
+  u.onboundary = (e)=>{
+    if(e.name && e.name !== "word") return;
+    gotB = true;
+    if(player.fbTimer){ clearTimeout(player.fbTimer); player.fbTimer = null; }
+    const ci = e.charIndex + offset;
+    let idx = 0, lo = 0, hi = words.length-1;
+    while(lo<=hi){ const m=(lo+hi)>>1; if(words[m].start<=ci){ idx=m; lo=m+1; } else hi=m-1; }
+    if(idx >= startWord) activate(pi, idx);
+  };
+  u.onend = ()=>{
+    if(player.fbTimer){ clearTimeout(player.fbTimer); player.fbTimer = null; }
+    if(player.stopped) return;
+    words.forEach(wd=>{ wd.el.classList.remove("w--active"); wd.el.classList.add("w--done"); });
+    player.activeEl = null;
+    const nextP = pi + 1;
+    if(nextP < story.en.length){ speakPara(nextP, 0); }
+    else {
+      player.para = story.en.length; player.state = "idle";
+      updateProgress(TOTAL_WORDS, TOTAL_WORDS);
+      syncControls();
+    }
+  };
+  u.onerror = (e)=>{
+    if(player.stopped) return;
+    if(e && (e.error==="interrupted" || e.error==="canceled")) return;
+    if(player.fbTimer){ clearTimeout(player.fbTimer); player.fbTimer = null; }
+    const nextP = pi + 1;
+    if(nextP < story.en.length) speakPara(nextP, 0);
+    else { player.state="idle"; syncControls(); }
+  };
+  player.current = u;
+  try{ synth.speak(u); }catch(err){}
+}
+
+function activate(pi, wi){
+  const words = wordData[pi];
+  if(!words[wi]) return;
+  if(player.activeEl && player.activeEl !== words[wi].el){
+    player.activeEl.classList.remove("w--active");
+    player.activeEl.classList.add("w--done");
+  }
+  const el = words[wi].el;
+  el.classList.remove("w--done");
+  el.classList.add("w--active");
+  player.activeEl = el;
+  updateProgress(prefixCount[pi] + wi + 1, TOTAL_WORDS);
+  autoScroll(el);
+}
+function updateProgress(done, total){
+  if(elProg) elProg.style.width = Math.min(100, Math.round(done/total*100)) + "%";
+}
+function resetMarks(){
+  app.querySelectorAll(".w--active,.w--done").forEach(el=>el.classList.remove("w--active","w--done"));
+  player.activeEl = null;
+  updateProgress(0, TOTAL_WORDS || 1);
+}
+function autoScroll(el){
+  const r = el.getBoundingClientRect();
+  if(r.top < 150 || r.bottom > window.innerHeight - 80){
+    el.scrollIntoView({ block:"center", behavior: reduceMotion ? "auto" : "smooth" });
+  }
+}
+function syncControls(){
+  const playing = player.state === "playing";
+  const paused = player.state === "paused";
+  if(elBtnPlay){
+    elBtnPlay.classList.toggle("is-playing", playing);
+    elBtnPlay.innerHTML = playing ? "&#10074;&#10074;" : "&#9654;";
+    elBtnPlay.setAttribute("aria-label", playing ? "暫停朗讀" : (paused ? "繼續朗讀" : "開始朗讀"));
+  }
+}
+
+/* ---- go ---- */
+if(!location.hash) location.hash = "#/";
+route();
+</script>
+
+</body></html>
