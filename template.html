@@ -52,6 +52,10 @@ a{color:inherit}
   margin:.3em 0 .22em;text-wrap:balance}
 .masthead .stand{font:400 1.02rem/1.55 var(--serif);color:var(--ink-soft);max-width:32ch;
   padding-bottom:22px;border-bottom:1px solid var(--line)}
+.masthead__row{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.masthead__row h1{flex:1}
+.masthead__icon{flex:none;width:58px;height:58px}
+@media (max-width:420px){.masthead__icon{width:44px;height:44px}}
 
 .list{display:flex;flex-direction:column}
 .story{position:relative;display:grid;grid-template-columns:40px 1fr;column-gap:16px;row-gap:0;
@@ -250,7 +254,18 @@ function renderHome(){
     <header class="masthead">
       <div class="masthead__rule"></div>
       <div class="mark"><span>晨讀 · Morning Read</span><span class="ed">{{DATE_DOT}}</span></div>
-      <h1>今日國際新聞</h1>
+      <div class="masthead__row">
+        <h1>今日國際新聞</h1>
+        <svg class="masthead__icon" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="30" cy="30" r="21" fill="none" stroke="var(--rule)" stroke-width="2"/>
+          <ellipse cx="30" cy="30" rx="8.5" ry="21" fill="none" stroke="var(--muted)" stroke-width="1.2"/>
+          <path d="M9,30 H51" fill="none" stroke="var(--muted)" stroke-width="1.2"/>
+          <path d="M12,19 Q30,26 48,19" fill="none" stroke="var(--muted)" stroke-width="1"/>
+          <path d="M12,41 Q30,34 48,41" fill="none" stroke="var(--muted)" stroke-width="1"/>
+          <rect x="33" y="39" width="27" height="10" rx="5" transform="rotate(-18 46.5 44)" fill="var(--marker)"/>
+          <circle cx="55" cy="12" r="4" fill="var(--accent)"/>
+        </svg>
+      </div>
       <p class="stand">{{COUNT}} 則今日全球新聞摘要，中英對照。點入可讀英文摘要、看中文翻譯、聽逐字朗讀，並查重點單字與文法；每則都附「閱讀完整文章」連結。</p>
     </header>
     <div class="list">${items}</div>
