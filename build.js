@@ -114,7 +114,7 @@ async function buildVocabAndGrammar(sentences) {
   return { vocab, grammar };
 }
 
-async function buildArticle(item, usedIds) {
+async function buildArticle(item, usedIds, now) {
   const titleEn = item.title.trim();
   const descRaw = item.description.trim();
   // Drop boilerplate/teaser cruft some feeds append (e.g. "Continue reading...")
@@ -154,6 +154,7 @@ async function buildArticle(item, usedIds) {
     id,
     cat: guessCategory(titleEn + " " + desc),
     source: item.source,
+    date: fmtDateZh(now),
     read: readTimeLabel(totalWords),
     titleEn,
     titleZh,
@@ -180,7 +181,7 @@ async function main() {
   for (const c of candidates) {
     if (articles.length >= TARGET_COUNT) break;
     try {
-      const art = await buildArticle(c, usedIds);
+      const art = await buildArticle(c, usedIds, now);
       if (art) {
         articles.push(art);
         console.log("  + kept:", art.titleEn);
